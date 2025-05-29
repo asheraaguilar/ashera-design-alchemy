@@ -2,25 +2,11 @@
 const Experience = () => {
   const experiences = [
     {
-      title: "Senior Software Engineer",
-      company: "Innovatech Solutions",
-      period: "2022 - Present",
-      description: "Leading a team of developers in building enterprise-level web applications using React, Node.js, and AWS. Implemented CI/CD pipelines that reduced deployment time by 40% and improved code quality.",
-      skills: ["React", "Node.js", "AWS", "TypeScript", "MongoDB"]
-    },
-    {
-      title: "UX Designer & Frontend Developer",
-      company: "DigitalCraft Agency",
-      period: "2019 - 2022",
-      description: "Designed and developed user interfaces for clients across fintech, healthcare, and e-commerce sectors. Created responsive designs and implemented them using modern frontend frameworks.",
-      skills: ["Figma", "Vue.js", "SCSS", "User Research", "Responsive Design"]
-    },
-    {
-      title: "Junior Web Developer",
-      company: "TechStart Inc.",
-      period: "2017 - 2019",
-      description: "Developed and maintained websites for small to medium businesses. Collaborated with designers to implement responsive layouts and optimized website performance.",
-      skills: ["HTML/CSS", "JavaScript", "PHP", "WordPress", "SEO"]
+      title: "System Developer | Administrative Staff",
+      company: "Electronic System Research Center",
+      period: "Jan 2025 - April 2025",
+      description: "Completed a comprehensive 500-hour internship program focused on system development and administrative support. Gained hands-on experience in full-stack web development, working with modern frameworks and databases to create efficient digital solutions.",
+      skills: ["Tailwind CSS", "React", "MySQL"]
     }
   ];
 

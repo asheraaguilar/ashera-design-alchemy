@@ -54,9 +54,9 @@ const About = () => {
               <h3 className="text-xl font-semibold text-primary mb-4">Connect with me</h3>
               <div className="flex space-x-4">
                 {[
-                  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-                  { icon: Github, href: "https://github.com", label: "GitHub" },
-                  { icon: Facebook, href: "https://facebook.com", label: "Facebook" }
+                  { icon: Linkedin, href: "https://www.linkedin.com/in/ashera-kathryn-aguilar-a40b89289/", label: "LinkedIn" },
+                  { icon: Github, href: "https://github.com/asheraaguilar", label: "GitHub" },
+                  { icon: Facebook, href: "https://www.facebook.com/ashera.aguilar", label: "Facebook" }
                 ].map((social, index) => (
                   <a
                     key={social.label}

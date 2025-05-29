@@ -1,152 +1,81 @@
 
-import { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Linkedin, Github, Twitter, Instagram } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
+import { Mail, Phone, MapPin, Clock, Linkedin, Github, Facebook, Instagram } from 'lucide-react';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  const { toast } = useToast();
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Basic validation
-    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
-      toast({
-        title: "Error",
-        description: "Please fill in all fields",
-        variant: "destructive"
-      });
-      return;
-    }
-
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      toast({
-        title: "Error",
-        description: "Please enter a valid email address",
-        variant: "destructive"
-      });
-      return;
-    }
-
-    // Simulate form submission
-    console.log('Form submitted:', formData);
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
-
-    toast({
-      title: "Success!",
-      description: "Thank you for your message! I'll get back to you soon.",
-    });
-  };
-
-  const contactInfo = [
-    {
-      icon: Mail,
-      title: "Email",
-      content: "ashera.aguilar@example.com",
-      href: "mailto:ashera.aguilar@example.com"
-    },
-    {
-      icon: Phone,
-      title: "Phone",
-      content: "+1 (234) 567-890",
-      href: "tel:+1234567890"
-    },
-    {
-      icon: MapPin,
-      title: "Location",
-      content: "San Francisco, California, USA",
-      href: "#"
-    },
-    {
-      icon: Clock,
-      title: "Availability",
-      content: "Monday - Friday, 9:00 AM - 6:00 PM PST",
-      href: "#"
-    }
-  ];
-
-  const socialLinks = [
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Instagram, href: "#", label: "Instagram" }
-  ];
-
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-              Get In Touch
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Ready to collaborate on your next project? Let's discuss how we can bring your ideas to life.
-            </p>
-          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center gradient-text">
+            Get In Touch
+          </h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
-            <div className="animate-fade-in-left">
-              <h3 className="text-2xl font-bold text-primary mb-8">Contact Information</h3>
+            <div className="stagger-child">
+              <h3 className="text-3xl font-bold text-primary mb-8">Let's Connect</h3>
               
-              <div className="space-y-6 mb-8">
-                {contactInfo.map((info, index) => (
-                  <div 
-                    key={index}
-                    className="flex items-start group stagger-child"
-                    style={{ '--stagger-delay': `${index * 100}ms` } as React.CSSProperties}
-                  >
-                    <div className="w-12 h-12 flex items-center justify-center text-primary group-hover:text-white group-hover:bg-primary rounded-xl border-2 border-primary transition-all duration-300 mr-4 group-hover:scale-110">
-                      <info.icon size={20} />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-800 mb-1">{info.title}</h4>
-                      {info.href && info.href !== "#" ? (
-                        <a 
-                          href={info.href}
-                          className="text-primary hover:underline transition-colors duration-300"
-                        >
-                          {info.content}
-                        </a>
-                      ) : (
-                        <p className="text-gray-700">{info.content}</p>
-                      )}
-                    </div>
+              <div className="space-y-8">
+                <div className="flex items-start group">
+                  <div className="w-14 h-14 flex items-center justify-center text-white gradient-bg rounded-2xl mr-6 group-hover:scale-110 transition-transform duration-300">
+                    <Mail size={24} />
                   </div>
-                ))}
+                  <div>
+                    <h4 className="font-semibold text-xl text-gray-800 mb-2">Email</h4>
+                    <a href="mailto:ashera.aguilar@example.com" className="text-primary hover:text-secondary transition-colors text-lg">
+                      ashera.aguilar@example.com
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="flex items-start group">
+                  <div className="w-14 h-14 flex items-center justify-center text-white gradient-bg rounded-2xl mr-6 group-hover:scale-110 transition-transform duration-300">
+                    <Phone size={24} />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-xl text-gray-800 mb-2">Phone</h4>
+                    <a href="tel:+1234567890" className="text-primary hover:text-secondary transition-colors text-lg">
+                      +1 (234) 567-890
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="flex items-start group">
+                  <div className="w-14 h-14 flex items-center justify-center text-white gradient-bg rounded-2xl mr-6 group-hover:scale-110 transition-transform duration-300">
+                    <MapPin size={24} />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-xl text-gray-800 mb-2">Location</h4>
+                    <p className="text-gray-700 text-lg">Lipa City, Batangas, Philippines</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start group">
+                  <div className="w-14 h-14 flex items-center justify-center text-white gradient-bg rounded-2xl mr-6 group-hover:scale-110 transition-transform duration-300">
+                    <Clock size={24} />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-xl text-gray-800 mb-2">Availability</h4>
+                    <p className="text-gray-700 text-lg">Monday - Friday, 9:00 AM - 6:00 PM PST</p>
+                  </div>
+                </div>
               </div>
 
-              <div>
-                <h4 className="font-semibold text-gray-800 mb-4">Connect with me</h4>
+              <div className="mt-12">
+                <h4 className="font-semibold text-xl text-gray-800 mb-6">Follow Me</h4>
                 <div className="flex space-x-4">
-                  {socialLinks.map((social, index) => (
+                  {[
+                    { icon: Linkedin, href: "https://www.linkedin.com/in/ashera-kathryn-aguilar-a40b89289/", label: "LinkedIn" },
+                    { icon: Github, href: "https://github.com/asheraaguilar", label: "GitHub" },
+                    { icon: Facebook, href: "https://www.facebook.com/ashera.aguilar", label: "Facebook" },
+                    { icon: Instagram, href: "#", label: "Instagram" }
+                  ].map((social, index) => (
                     <a
-                      key={index}
+                      key={social.label}
                       href={social.href}
-                      className="w-12 h-12 flex items-center justify-center text-primary hover:text-white hover:bg-primary rounded-xl border-2 border-primary transition-all duration-300 transform hover:scale-110 hover:rotate-6 stagger-child"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-12 h-12 flex items-center justify-center text-primary hover:text-white hover:bg-primary rounded-xl border-2 border-primary transition-all duration-300 transform hover:scale-110 hover:rotate-6"
                       style={{ '--stagger-delay': `${index * 100}ms` } as React.CSSProperties}
                       aria-label={social.label}
                     >
@@ -158,77 +87,57 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <div className="animate-fade-in-right">
-              <h3 className="text-2xl font-bold text-primary mb-8">Send Me a Message</h3>
+            <div className="card-hover bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-100 stagger-child">
+              <h3 className="text-3xl font-bold text-primary mb-8">Send Me a Message</h3>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
-                      Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
+                    <label htmlFor="name" className="block text-gray-700 mb-2 font-medium">Name</label>
+                    <input 
+                      type="text" 
+                      id="name" 
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300" 
                       placeholder="Your name"
                     />
                   </div>
-                  
                   <div>
-                    <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
+                    <label htmlFor="email" className="block text-gray-700 mb-2 font-medium">Email</label>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300" 
                       placeholder="Your email"
                     />
                   </div>
                 </div>
                 
                 <div>
-                  <label htmlFor="subject" className="block text-gray-700 font-medium mb-2">
-                    Subject *
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
+                  <label htmlFor="subject" className="block text-gray-700 mb-2 font-medium">Subject</label>
+                  <input 
+                    type="text" 
+                    id="subject" 
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300" 
                     placeholder="Subject"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    rows={6}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 resize-none"
+                  <label htmlFor="message" className="block text-gray-700 mb-2 font-medium">Message</label>
+                  <textarea 
+                    id="message" 
+                    rows={6} 
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 resize-none" 
                     placeholder="Your message"
-                  />
+                  ></textarea>
                 </div>
                 
-                <button
-                  type="submit"
-                  className="w-full gradient-bg text-white px-8 py-4 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] hover:animate-glow"
+                <button 
+                  type="submit" 
+                  className="w-full gradient-bg text-white px-8 py-4 rounded-lg font-medium shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center group"
                 >
                   Send Message
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </button>
               </form>
             </div>

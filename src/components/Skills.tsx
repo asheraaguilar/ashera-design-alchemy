@@ -7,36 +7,39 @@ const Skills = () => {
       title: "Technical Skills",
       icon: Code,
       skills: [
-        "JavaScript/TypeScript",
-        "React & React Native", 
+        "HTML",
+        "Tailwind CSS", 
+        "JavaScript",
+        "React",
         "Node.js & Express",
-        "HTML5/CSS3/SASS",
-        "SQL & NoSQL Databases",
-        "RESTful & GraphQL APIs"
+        "Arduino IDE"
       ]
     },
     {
       title: "Design Skills", 
       icon: Palette,
       skills: [
-        "User Experience (UX) Design",
-        "User Interface (UI) Design",
+        "User Experience Design",
+        "User Interface Design",
         "Wireframing & Prototyping",
-        "Figma & Adobe XD",
+        "Figma",
+        "Adobe (Photoshop, Illustrator, InDesign, After Effects, Premier Pro)",
         "Responsive Web Design",
-        "Design Systems"
+        "Design Systems",
+        "Canva"
       ]
     },
     {
       title: "Soft Skills",
       icon: Users,
       skills: [
-        "Project Management",
-        "Team Leadership",
-        "Problem Solving", 
-        "Client Communication",
-        "Time Management",
-        "Agile Methodologies"
+        "Management skills",
+        "Good communication skills",
+        "Problem solving skills", 
+        "Collaborative skills",
+        "Strong work ethic",
+        "Leadership",
+        "Attention to detail"
       ]
     }
   ];
