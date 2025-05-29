@@ -22,20 +22,31 @@ const About = () => {
             
             <div className="space-y-6 text-gray-700 leading-relaxed">
               <p className="stagger-child text-lg">
-                With over 5 years of experience in software development and UX design, I specialize in creating 
-                intuitive and efficient digital solutions that address real-world problems. My approach combines 
-                technical expertise with user-centered design principles.
+                I am a Bachelor of Science in Information Technology Major in Business Analytics graduate 
+                from Batangas State University - The National Engineering University, Lipa Campus. Throughout 
+                my academic journey, I primarily took on the role of front-end developer in group projects, 
+                driven by my passion for layout and graphic design.
               </p>
               
               <p className="stagger-child text-lg">
-                I hold a Master's degree in Computer Science from Stanford University and a Bachelor's in 
-                Information Technology from the University of the Philippines. My academic background, coupled 
-                with my industry experience, has equipped me with a unique perspective on technological innovation.
+                My expertise spans across modern web technologies including React.js, JavaScript, and responsive 
+                design frameworks. I have a proven track record of transforming complex data insights into 
+                intuitive user interfaces, bridging the gap between technical functionality and user experience. 
+                My business analytics background enables me to create data-driven solutions that not only look 
+                great but also deliver measurable business value.
               </p>
               
               <p className="stagger-child text-lg">
-                When I'm not coding or designing, you can find me exploring hiking trails, experimenting with 
-                new recipes, or volunteering at local tech education initiatives for underrepresented groups in STEM.
+                I am proficient in agile development methodologies, have experience with version control systems 
+                like Git, and am skilled in collaborating with cross-functional teams. My portfolio includes 
+                healthcare management systems, educational platforms, and government service applications, 
+                demonstrating my versatility across different industries and user needs.
+              </p>
+              
+              <p className="stagger-child text-lg">
+                Beyond coding, I actively participate in technology conferences and continuous learning programs 
+                to stay updated with industry trends. I am passionate about creating accessible, performance-optimized 
+                applications that enhance user productivity and engagement.
               </p>
             </div>
 

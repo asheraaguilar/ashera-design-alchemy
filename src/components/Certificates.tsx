@@ -4,57 +4,138 @@ import { Award, Calendar, ExternalLink } from 'lucide-react';
 const Certificates = () => {
   const certificates = [
     {
-      title: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      date: "2023",
-      description: "Professional-level certification demonstrating expertise in designing distributed applications on AWS.",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop&crop=center",
-      credentialId: "AWS-PSA-12345",
+      title: "BITCON 2025: Building a Connected Tomorrow: IoT Innovations and Beyond",
+      issuer: "Technology Conference",
+      date: "April 26, 2025",
+      description: "Advanced conference on Internet of Things innovations and future technology trends.",
+      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop&crop=center",
+      credentialId: "BITCON-2025-001",
       verifyUrl: "#"
     },
     {
-      title: "Google UX Design Professional Certificate",
-      issuer: "Google",
-      date: "2022",
-      description: "Comprehensive program covering user experience design process, from empathizing with users to testing designs.",
-      image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop&crop=center",
-      credentialId: "GOOGLE-UX-67890",
+      title: "Web Development Training",
+      issuer: "Professional Development",
+      date: "March 24, 2025",
+      description: "Comprehensive training in modern web development technologies and best practices.",
+      image: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=400&h=300&fit=crop&crop=center",
+      credentialId: "WEB-DEV-2025",
       verifyUrl: "#"
     },
     {
-      title: "Meta React Developer Professional Certificate",
-      issuer: "Meta",
-      date: "2022",
-      description: "Specialized training in React development, including advanced concepts and best practices.",
-      image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=300&fit=crop&crop=center",
-      credentialId: "META-REACT-11111",
+      title: "LaTeX Training",
+      issuer: "Technical Documentation",
+      date: "March 4, 2025",
+      description: "Professional training in LaTeX for scientific and technical document preparation.",
+      image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=400&h=300&fit=crop&crop=center",
+      credentialId: "LATEX-2025",
       verifyUrl: "#"
     },
     {
-      title: "Certified Scrum Master (CSM)",
-      issuer: "Scrum Alliance",
-      date: "2021",
-      description: "Certification in Agile project management and Scrum methodology for leading development teams.",
+      title: "Arduino Training",
+      issuer: "Electronics Development",
+      date: "February 11, 2025",
+      description: "Hands-on training in Arduino programming and hardware prototyping.",
+      image: "https://images.unsplash.com/photo-1553808444-e3c8e7cfd6b0?w=400&h=300&fit=crop&crop=center",
+      credentialId: "ARDUINO-2025",
+      verifyUrl: "#"
+    },
+    {
+      title: "Easy EDA Training",
+      issuer: "Circuit Design",
+      date: "February 3, 2025",
+      description: "Training in electronic design automation using Easy EDA software.",
+      image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=400&h=300&fit=crop&crop=center",
+      credentialId: "EDA-2025",
+      verifyUrl: "#"
+    },
+    {
+      title: "DATABIZ CONFERENCE 2024: Data Science, Artificial Intelligence and Business Analytics",
+      issuer: "Data Analytics Conference",
+      date: "November 9, 2024",
+      description: "Conference focusing on data science applications in business and AI innovations.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&crop=center",
+      credentialId: "DATABIZ-2024",
+      verifyUrl: "#"
+    },
+    {
+      title: "Data Analysis and Visualization Using Excel",
+      issuer: "Microsoft Excel Training",
+      date: "June 19, 2024",
+      description: "Advanced Excel techniques for data analysis and creating impactful visualizations.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&crop=center",
+      credentialId: "EXCEL-VIZ-2024",
+      verifyUrl: "#"
+    },
+    {
+      title: "eGOVPh Super App Orientation",
+      issuer: "Government Technology",
+      date: "May 10, 2024",
+      description: "Orientation on Philippine government's digital transformation initiatives.",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop&crop=center",
+      credentialId: "EGOVPH-2024",
+      verifyUrl: "#"
+    },
+    {
+      title: "BITCON 2024: Navigating the Future of Technology: Integration, Innovation and Security",
+      issuer: "Technology Conference",
+      date: "April 6, 2024",
+      description: "Conference on emerging technologies, system integration, and cybersecurity.",
+      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop&crop=center",
+      credentialId: "BITCON-2024",
+      verifyUrl: "#"
+    },
+    {
+      title: "TechSynergy: Navigating the Digital Landscape 2023 - Connecting Concepts, Bridging Technologies",
+      issuer: "Tech Innovation Summit",
+      date: "December 4, 2023",
+      description: "Summit on digital transformation and technology convergence.",
+      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop&crop=center",
+      credentialId: "TECHSYNERGY-2023",
+      verifyUrl: "#"
+    },
+    {
+      title: "Odyssey 2.0: Diving Deeper to Leadership",
+      issuer: "Leadership Development",
+      date: "September 17, 2023",
+      description: "Leadership development program focusing on management and team building skills.",
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop&crop=center",
-      credentialId: "CSM-22222",
+      credentialId: "ODYSSEY-2023",
       verifyUrl: "#"
     },
     {
-      title: "MongoDB Developer Certification",
-      issuer: "MongoDB University",
-      date: "2021",
-      description: "Comprehensive training in MongoDB database design, development, and administration.",
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop&crop=center",
-      credentialId: "MONGO-DEV-33333",
+      title: "Unleashing the Power of Data: A Webinar Series on the Art and Science of Data",
+      issuer: "Data Science Institute",
+      date: "May 19, 2023",
+      description: "Comprehensive webinar series covering data analytics and data science methodologies.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&crop=center",
+      credentialId: "DATA-POWER-2023",
       verifyUrl: "#"
     },
     {
-      title: "Figma Design Certification",
-      issuer: "Figma Academy",
-      date: "2020",
-      description: "Advanced certification in Figma for professional UI/UX design and prototyping.",
+      title: "Huawei ICT Academy: How to Get Certified?",
+      issuer: "Huawei Technologies",
+      date: "March 26, 2022",
+      description: "Information and communication technology certification guidance from Huawei Academy.",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop&crop=center",
+      credentialId: "HUAWEI-ICT-2022",
+      verifyUrl: "#"
+    },
+    {
+      title: "Campus Journalism Seminar-Workshop",
+      issuer: "Journalism Institute",
+      date: "July 26, 2019",
+      description: "Workshop on campus journalism, writing techniques, and media ethics.",
       image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=400&h=300&fit=crop&crop=center",
-      credentialId: "FIGMA-CERT-44444",
+      credentialId: "JOURNALISM-2019",
+      verifyUrl: "#"
+    },
+    {
+      title: "Division Orientation Training on Robotics Technology",
+      issuer: "Robotics Division",
+      date: "January 31, 2018",
+      description: "Foundational training in robotics technology and automation systems.",
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop&crop=center",
+      credentialId: "ROBOTICS-2018",
       verifyUrl: "#"
     }
   ];
@@ -67,7 +148,7 @@ const Certificates = () => {
             Certificates & Achievements
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Continuous learning and professional development through industry-recognized certifications
+            Continuous learning and professional development through industry conferences, workshops, and training programs
           </p>
         </div>
         
@@ -99,13 +180,13 @@ const Certificates = () => {
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-bold text-primary mb-2 group-hover:gradient-text transition-all duration-300">
+                <h3 className="text-lg font-bold text-primary mb-2 group-hover:gradient-text transition-all duration-300 line-clamp-2">
                   {cert.title}
                 </h3>
                 
                 <p className="text-secondary font-medium mb-3">{cert.issuer}</p>
                 
-                <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                <p className="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
                   {cert.description}
                 </p>
                 
@@ -128,7 +209,7 @@ const Certificates = () => {
         <div className="text-center mt-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full">
             <Award className="w-5 h-5 text-primary mr-2" />
-            <span className="text-primary font-medium">More certifications in progress</span>
+            <span className="text-primary font-medium">Committed to continuous learning and professional growth</span>
           </div>
         </div>
       </div>
