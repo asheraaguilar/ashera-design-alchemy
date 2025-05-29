@@ -4,41 +4,78 @@ import { ArrowRight, Github, ExternalLink } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
-      title: "PARS: Rural Health Services",
-      description: "Progressive web application-based Appointment System for Rural Health Services. Built with React JS, Node.js, Express.js, and MySQL. Features real-time scheduling and management tools.",
-      image: "https://readdy.ai/api/search-image?query=modern%20healthcare%20appointment%20scheduling%20system%20interface%20with%20clean%20design%2C%20showing%20calendar%20and%20booking%20features%2C%20medical%20themed%20elements%2C%20professional%20UI%20design%20for%20rural%20health%20services%2C%20minimalist%20and%20accessible%20interface&width=800&height=600&seq=11&orientation=landscape",
+      title: "Electronic Systems Research Center Website",
+      description: "Built with React JS, Node.js, Express.js, and MySQL. Features real-time scheduling, appointment and management tools.",
+      image: "/lovable-uploads/esrc.png",
+      skills: ["HTML","Tailwind CSS"],
+      isGlassEffect: true
+    },
+    {
+      title: "PARS: Progressive web application-based Appointment System for Rural Health Services",
+      description: "Built with React JS, Node.js, Express.js, and MySQL. Features real-time scheduling, appointment and management tools.",
+      image: "/lovable-uploads/pars.png",
       skills: ["React JS", "Node.js", "MySQL", "Express.js", "Axios"],
       isGlassEffect: true
     },
     {
       title: "Lipeño E-Skolar System",
-      description: "Comprehensive scholarship management system for Lipa City students, featuring application processing, monitoring, and disbursement tracking.",
-      image: "https://readdy.ai/api/search-image?query=education%20management%20system%20dashboard%20with%20modern%20UI%2C%20showing%20student%20profiles%2C%20academic%20records%2C%20and%20scholarship%20management%20features%2C%20professional%20educational%20interface%20design%20with%20blue%20and%20white%20color%20scheme&width=800&height=600&seq=12&orientation=landscape",
+      description: "Comprehensive scholarship management system for Lipa City students, featuring application processing and monitoring with the integration of analytics.",
+      image: "/lovable-uploads/lipenoeskolar.png",
+      skills: ["Django", "PostgreSQL", "HTML/CSS/JS"]
+    },
+    {
+      title: "The Apex News App",
+      description: "Comprehensive scholarship management system for Lipa City students, featuring application processing and monitoring with the integration of analytics.",
+      image: "/lovable-uploads/apexnewsapp.png",
       skills: ["Django", "PostgreSQL", "HTML/CSS/JS"]
     },
     {
       title: "Student Conduct Management",
       description: "Web-based system for managing student conduct records, disciplinary actions, and behavioral tracking in educational institutions.",
-      image: "https://readdy.ai/api/search-image?query=student%20management%20system%20interface%20showing%20behavior%20tracking%2C%20disciplinary%20records%2C%20and%20reporting%20features%2C%20clean%20professional%20educational%20dashboard%20design%20with%20modern%20UI%20elements&width=800&height=600&seq=13&orientation=landscape",
+      image: "/lovable-uploads/StudentConductManagement.png",
+      skills: ["PHP", "HTML/CSS", "JavaScript"]
+    },
+    {
+      title: "Trash Track",
+      description: "Web-based system for managing student conduct records, disciplinary actions, and behavioral tracking in educational institutions.",
+      image: "/lovable-uploads/trashtrack.png",
+      skills: ["PHP", "HTML/CSS", "JavaScript"]
+    },
+    {
+      title: "Angat Lipa",
+      description: "Web-based system for managing student conduct records, disciplinary actions, and behavioral tracking in educational institutions.",
+      image: "/lovable-uploads/angatlipa.png",
+      skills: ["PHP", "HTML/CSS", "JavaScript"]
+    },
+    {
+      title: "Snackify Ordering System",
+      description: "Web-based system for managing student conduct records, disciplinary actions, and behavioral tracking in educational institutions.",
+      image: "/lovable-uploads/snackify.png",
       skills: ["PHP", "HTML/CSS", "JavaScript"]
     },
     {
       title: "Bus Tracking System",
       description: "Real-time bus tracking and monitoring system developed in Visual Basic, providing location updates and route management.",
-      image: "https://readdy.ai/api/search-image?query=bus%20tracking%20system%20interface%20with%20map%20visualization%2C%20real-time%20tracking%20features%2C%20and%20route%20management%2C%20professional%20transportation%20management%20UI%20design&width=800&height=600&seq=14&orientation=landscape",
+      image: "bussystem.png",
       skills: ["Visual Basic", "Tracking", "GPS"]
+    },
+    {
+      title: "BeeIS U Store Inventory and Management Dashboard",
+      description: "Real-time bus tracking and monitoring system developed in Visual Basic, providing location updates and route management.",
+      image: "/lovable-uploads/BeeIsU.png",
+      skills: ["Power Bi"]
     },
     {
       title: "Lipeños System",
       description: "Comprehensive citizen information management system built with C# and MySQL, designed for efficient data handling and service delivery.",
-      image: "https://readdy.ai/api/search-image?query=citizen%20information%20management%20system%20interface%20with%20user%20profiles%2C%20data%20management%20features%2C%20and%20administrative%20dashboard%2C%20clean%20professional%20government%20service%20UI%20design&width=800&height=600&seq=15&orientation=landscape",
+      image: "/lovable-uploads/lipeno.png",
       skills: ["C#", "MySQL", "Desktop"]
     },
     {
       title: "AgriLink",
       description: "Agricultural management platform designed in Figma, connecting farmers with resources, markets, and agricultural services.",
-      image: "https://readdy.ai/api/search-image?query=agriculture%20management%20platform%20interface%20with%20modern%20design%2C%20showing%20crop%20management%2C%20farmer%20connectivity%2C%20and%20marketplace%20features%2C%20professional%20agricultural%20tech%20UI%20design%20in%20Figma&width=800&height=600&seq=16&orientation=landscape",
-      skills: ["Figma", "UX Design", "Agriculture"]
+      image: "/lovable-uploads/agrilink.png",
+      skills: ["Figma"]
     }
   ];
 

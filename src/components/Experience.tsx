@@ -2,11 +2,11 @@
 const Experience = () => {
   const experiences = [
     {
-      title: "System Developer | Administrative Staff",
+      title: "System Developer",
       company: "Electronic System Research Center",
-      period: "Jan 2025 - April 2025",
+      period: "Jan-April 2025",
       description: "Completed a comprehensive 500-hour internship program focused on system development and administrative support. Gained hands-on experience in full-stack web development, working with modern frameworks and databases to create efficient digital solutions.",
-      skills: ["Tailwind CSS", "React", "MySQL"]
+      skills: ["Tailwind CSS", "React", "MySQL", "Microsoft"]
     }
   ];
 
