@@ -1,3 +1,4 @@
+
 import { Mail, Phone, MapPin, Clock, Linkedin, Github, Facebook, Instagram, ArrowRight } from 'lucide-react';
 
 const Contact = () => {
@@ -21,8 +22,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-xl text-gray-800 mb-2">Email</h4>
-                    <a href="mailto:ashera.aguilar@example.com" className="text-primary hover:text-secondary transition-colors text-lg">
-                      ashera.aguilar@example.com
+                    <a href="mailto:aguilarasherakathryn@gmail.com" className="text-primary hover:text-secondary transition-colors text-lg">
+                      aguilarasherakathryn@gmail.com
                     </a>
                   </div>
                 </div>
@@ -33,8 +34,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-xl text-gray-800 mb-2">Phone</h4>
-                    <a href="tel:+1234567890" className="text-primary hover:text-secondary transition-colors text-lg">
-                      +1 (234) 567-890
+                    <a href="tel:09952318729" className="text-primary hover:text-secondary transition-colors text-lg">
+                      09952318729
                     </a>
                   </div>
                 </div>
@@ -46,16 +47,6 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-xl text-gray-800 mb-2">Location</h4>
                     <p className="text-gray-700 text-lg">Lipa City, Batangas, Philippines</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start group">
-                  <div className="w-14 h-14 flex items-center justify-center text-white gradient-bg rounded-2xl mr-6 group-hover:scale-110 transition-transform duration-300">
-                    <Clock size={24} />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-xl text-gray-800 mb-2">Availability</h4>
-                    <p className="text-gray-700 text-lg">Monday - Friday, 9:00 AM - 6:00 PM PST</p>
                   </div>
                 </div>
               </div>
