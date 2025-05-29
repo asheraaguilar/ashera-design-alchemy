@@ -1,5 +1,4 @@
-
-import { Mail, Phone, MapPin, Clock, Linkedin, Github, Facebook, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Linkedin, Github, Facebook, Instagram, ArrowRight } from 'lucide-react';
 
 const Contact = () => {
   return (
