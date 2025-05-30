@@ -193,6 +193,21 @@ textarea:focus {
 }
 
 .cards--active .card:hover {
-  transform: translateY(-10px) !important;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px) !important;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile optimizations */
+@media (min-width: 768px) {
+  .cards--active .card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Ensure cards are touch-friendly on mobile */
+@media (max-width: 767px) {
+  .card {
+    touch-action: manipulation;
+  }
 }

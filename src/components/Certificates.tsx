@@ -88,19 +88,19 @@ const Certificates = () => {
   };
 
   return (
-    <section id="certificates" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
+    <section id="certificates" className="py-12 md:py-20 bg-gray-50">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center mb-8 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 gradient-text">
             Certificates & Achievements
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
             A collection of certificates from conferences, workshops, and training programs
           </p>
         </div>
         
-        <div className="relative max-w-4xl mx-auto">
-          <div className="cards cards--active relative h-96 perspective-1000">
+        <div className="relative max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-4xl mx-auto">
+          <div className="cards cards--active relative h-64 sm:h-80 md:h-96 perspective-1000">
             {certificates.map((cert, index) => (
               <div
                 key={index}
@@ -111,14 +111,14 @@ const Certificates = () => {
                   transform: index === currentIndex 
                     ? 'translateX(0) translateY(0) scale(1)' 
                     : index === (currentIndex + 1) % certificates.length
-                    ? 'translateX(20px) translateY(20px) scale(0.95)'
+                    ? 'translateX(10px) translateY(10px) scale(0.95) sm:translateX(15px) sm:translateY(15px) md:translateX(20px) md:translateY(20px)'
                     : index < currentIndex
-                    ? 'translateX(-100px) translateY(-20px) scale(0.9) rotateY(-15deg)'
-                    : 'translateX(40px) translateY(40px) scale(0.9)'
+                    ? 'translateX(-50px) translateY(-10px) scale(0.9) rotateY(-10deg) sm:translateX(-75px) sm:translateY(-15px) md:translateX(-100px) md:translateY(-20px) md:rotateY(-15deg)'
+                    : 'translateX(20px) translateY(20px) scale(0.9) sm:translateX(30px) sm:translateY(30px) md:translateX(40px) md:translateY(40px)'
                 }}
               >
-                <div className="bg-white rounded-2xl overflow-hidden shadow-2xl h-full">
-                  <div className="relative h-3/4 overflow-hidden">
+                <div className="bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-2xl h-full">
+                  <div className="relative h-2/3 md:h-3/4 overflow-hidden">
                     <img 
                       src={cert.image} 
                       alt={cert.title}
@@ -126,8 +126,8 @@ const Certificates = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                   </div>
-                  <div className="p-6 h-1/4 flex items-center justify-center">
-                    <h3 className="text-lg font-semibold text-center line-clamp-2 text-gray-800">
+                  <div className="p-3 sm:p-4 md:p-6 h-1/3 md:h-1/4 flex items-center justify-center">
+                    <h3 className="text-sm sm:text-base md:text-lg font-semibold text-center line-clamp-2 text-gray-800">
                       {cert.title}
                     </h3>
                   </div>
@@ -137,10 +137,10 @@ const Certificates = () => {
           </div>
         </div>
         
-        <div className="text-center mt-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full">
-            <Award className="w-5 h-5 text-primary mr-2" />
-            <span className="text-primary font-medium">Committed to continuous learning and professional growth</span>
+        <div className="text-center mt-8 md:mt-12">
+          <div className="inline-flex items-center px-4 md:px-6 py-2 md:py-3 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full">
+            <Award className="w-4 h-4 md:w-5 md:h-5 text-primary mr-2" />
+            <span className="text-primary font-medium text-sm md:text-base">Committed to continuous learning and professional growth</span>
           </div>
         </div>
       </div>
