@@ -6,6 +6,10 @@
 :root {
   --primary: #202B3B;
   --secondary: #596C87;
+  --start: 0;
+  --end: 360;
+  --lightness: 65%;
+  --base-chroma: 0.3;
 }
 
 * {
@@ -135,9 +139,186 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Smooth scrolling */
+/* Animated Text Effect Styles */
+.hero-title {
+  font-size: clamp(3rem, 8vw, 8rem);
+  line-height: 0.8;
+  margin: 0;
+  background: linear-gradient(
+    var(--primary) 60%,
+    color-mix(in oklch, var(--primary), transparent 50%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+.content-section {
+  display: flex;
+  place-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.sticky-text {
+  font-size: clamp(3rem, 6vw, 6rem);
+  position: sticky;
+  top: calc(50% - 0.5lh);
+  margin: 0;
+  display: inline-block;
+  height: fit-content;
+  font-weight: 600;
+  background: linear-gradient(
+    var(--primary) 50%,
+    color-mix(in oklch, var(--primary), transparent 25%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: 'Playfair Display', serif;
+}
+
+.animated-list {
+  font-weight: 600;
+  padding-inline: 0;
+  margin: 0;
+  list-style-type: none;
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 1.25;
+  font-family: 'Playfair Display', serif;
+}
+
+/* CSS Custom Properties for Animation */
+:root {
+  --start: 0;
+  --end: 360;
+  --lightness: 65%;
+  --base-chroma: 0.3;
+}
+
+[data-theme='dark'] {
+  --lightness: 75%;
+}
+
+[data-theme='light'] {
+  --lightness: 65%;
+}
+
+@media (prefers-color-scheme: dark) {
+  --lightness: 75%;
+}
+
+.animated-list {
+  --step: calc((var(--end) - var(--start)) / (var(--count) - 1));
+}
+
+.animated-list li:not(:last-of-type) {
+  color: oklch(
+    var(--lightness) var(--base-chroma)
+      calc(var(--start) + (var(--step) * var(--i)))
+  );
+}
+
+.animated-list li:last-of-type {
+  background: linear-gradient(
+    var(--primary) 50%,
+    color-mix(in oklch, var(--primary), transparent 25%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Animation Support Detection and Fallbacks */
+@supports (animation-timeline: scroll()) and (animation-range: 0% 100%) {
+  [data-animate='true'] .animated-list li {
+    opacity: 0.2;
+    animation-name: brighten;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-range: cover calc(50% - 1lh) calc(50% + 1lh);
+    animation-timeline: view();
+  }
+
+  [data-animate='true'] .animated-list li:first-of-type {
+    --start-opacity: 1;
+  }
+
+  [data-animate='true'] .animated-list li:last-of-type {
+    --brightness: 1;
+    --end-opacity: 1;
+  }
+
+  @keyframes brighten {
+    0% {
+      opacity: var(--start-opacity, 0.2);
+    }
+    50% {
+      opacity: 1;
+      filter: brightness(var(--brightness, 1.2));
+    }
+    100% {
+      opacity: var(--end-opacity, 0.2);
+    }
+  }
+}
+
+/* Fallback for browsers without scroll-driven animations */
+@supports not ((animation-timeline: scroll()) and (animation-range: 0% 100%)) {
+  .animated-list li {
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+  }
+  
+  .animated-list li:hover {
+    opacity: 1;
+  }
+  
+  .animated-list li:first-of-type,
+  .animated-list li:last-of-type {
+    opacity: 1;
+  }
+}
+
+/* Screen reader accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: clamp(2rem, 12vw, 4rem);
+  }
+  
+  .sticky-text,
+  .animated-list {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+  
+  .content-section {
+    padding-inline: 1rem;
+  }
+}
+
+/* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
+}
+
+/* Ensure proper spacing between sections */
+.content-section + .content-section {
+  margin-top: -10vh;
 }
 
 /* Focus styles for accessibility */
