@@ -1,215 +1,146 @@
 
-import { Award, Calendar, ExternalLink } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { useState } from 'react';
 
 const Certificates = () => {
   const certificates = [
     {
       title: "BITCON 2025: Building a Connected Tomorrow: IoT Innovations and Beyond",
-      issuer: "Technology Conference",
-      date: "April 26, 2025",
-      description: "Advanced conference on Internet of Things innovations and future technology trends.",
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop&crop=center",
-      credentialId: "BITCON-2025-001",
-      verifyUrl: "#"
+      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&h=400&fit=crop&crop=center"
     },
     {
       title: "Web Development Training",
-      issuer: "Professional Development",
-      date: "March 24, 2025",
-      description: "Comprehensive training in modern web development technologies and best practices.",
-      image: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=400&h=300&fit=crop&crop=center",
-      credentialId: "WEB-DEV-2025",
-      verifyUrl: "#"
+      image: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=600&h=400&fit=crop&crop=center"
     },
     {
       title: "LaTeX Training",
-      issuer: "Technical Documentation",
-      date: "March 4, 2025",
-      description: "Professional training in LaTeX for scientific and technical document preparation.",
-      image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=400&h=300&fit=crop&crop=center",
-      credentialId: "LATEX-2025",
-      verifyUrl: "#"
+      image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=600&h=400&fit=crop&crop=center"
     },
     {
       title: "Arduino Training",
-      issuer: "Electronics Development",
-      date: "February 11, 2025",
-      description: "Hands-on training in Arduino programming and hardware prototyping.",
-      image: "https://images.unsplash.com/photo-1553808444-e3c8e7cfd6b0?w=400&h=300&fit=crop&crop=center",
-      credentialId: "ARDUINO-2025",
-      verifyUrl: "#"
+      image: "https://images.unsplash.com/photo-1553808444-e3c8e7cfd6b0?w=600&h=400&fit=crop&crop=center"
     },
     {
       title: "Easy EDA Training",
-      issuer: "Circuit Design",
-      date: "February 3, 2025",
-      description: "Training in electronic design automation using Easy EDA software.",
-      image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=400&h=300&fit=crop&crop=center",
-      credentialId: "EDA-2025",
-      verifyUrl: "#"
+      image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=600&h=400&fit=crop&crop=center"
     },
     {
       title: "DATABIZ CONFERENCE 2024: Data Science, Artificial Intelligence and Business Analytics",
-      issuer: "Data Analytics Conference",
-      date: "November 9, 2024",
-      description: "Conference focusing on data science applications in business and AI innovations.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&crop=center",
-      credentialId: "DATABIZ-2024",
-      verifyUrl: "#"
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=center"
     },
     {
       title: "Data Analysis and Visualization Using Excel",
-      issuer: "Microsoft Excel Training",
-      date: "June 19, 2024",
-      description: "Advanced Excel techniques for data analysis and creating impactful visualizations.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&crop=center",
-      credentialId: "EXCEL-VIZ-2024",
-      verifyUrl: "#"
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=center"
     },
     {
       title: "eGOVPh Super App Orientation",
-      issuer: "Government Technology",
-      date: "May 10, 2024",
-      description: "Orientation on Philippine government's digital transformation initiatives.",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop&crop=center",
-      credentialId: "EGOVPH-2024",
-      verifyUrl: "#"
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop&crop=center"
     },
     {
       title: "BITCON 2024: Navigating the Future of Technology: Integration, Innovation and Security",
-      issuer: "Technology Conference",
-      date: "April 6, 2024",
-      description: "Conference on emerging technologies, system integration, and cybersecurity.",
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop&crop=center",
-      credentialId: "BITCON-2024",
-      verifyUrl: "#"
+      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&h=400&fit=crop&crop=center"
     },
     {
-      title: "TechSynergy: Navigating the Digital Landscape 2023 - Connecting Concepts, Bridging Technologies",
-      issuer: "Tech Innovation Summit",
-      date: "December 4, 2023",
-      description: "Summit on digital transformation and technology convergence.",
-      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop&crop=center",
-      credentialId: "TECHSYNERGY-2023",
-      verifyUrl: "#"
+      title: "TechSynergy: Navigating the Digital Landscape 2023",
+      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop&crop=center"
     },
     {
       title: "Odyssey 2.0: Diving Deeper to Leadership",
-      issuer: "Leadership Development",
-      date: "September 17, 2023",
-      description: "Leadership development program focusing on management and team building skills.",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop&crop=center",
-      credentialId: "ODYSSEY-2023",
-      verifyUrl: "#"
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&crop=center"
     },
     {
-      title: "Unleashing the Power of Data: A Webinar Series on the Art and Science of Data",
-      issuer: "Data Science Institute",
-      date: "May 19, 2023",
-      description: "Comprehensive webinar series covering data analytics and data science methodologies.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&crop=center",
-      credentialId: "DATA-POWER-2023",
-      verifyUrl: "#"
+      title: "Unleashing the Power of Data: A Webinar Series",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=center"
     },
     {
       title: "Huawei ICT Academy: How to Get Certified?",
-      issuer: "Huawei Technologies",
-      date: "March 26, 2022",
-      description: "Information and communication technology certification guidance from Huawei Academy.",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop&crop=center",
-      credentialId: "HUAWEI-ICT-2022",
-      verifyUrl: "#"
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop&crop=center"
     },
     {
       title: "Campus Journalism Seminar-Workshop",
-      issuer: "Journalism Institute",
-      date: "July 26, 2019",
-      description: "Workshop on campus journalism, writing techniques, and media ethics.",
-      image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=400&h=300&fit=crop&crop=center",
-      credentialId: "JOURNALISM-2019",
-      verifyUrl: "#"
+      image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600&h=400&fit=crop&crop=center"
     },
     {
       title: "Division Orientation Training on Robotics Technology",
-      issuer: "Robotics Division",
-      date: "January 31, 2018",
-      description: "Foundational training in robotics technology and automation systems.",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop&crop=center",
-      credentialId: "ROBOTICS-2018",
-      verifyUrl: "#"
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop&crop=center"
     }
   ];
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleCardClick = (index: number) => {
+    if (index !== currentIndex) {
+      setCurrentIndex(index);
+    }
+  };
+
+  const getCardClass = (index: number) => {
+    if (index === currentIndex) {
+      return 'card--current';
+    }
+    if (index === (currentIndex + 1) % certificates.length) {
+      return 'card--next';
+    }
+    if (index < currentIndex) {
+      return 'card--out';
+    }
+    return '';
+  };
+
   return (
-    <section id="certificates" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
+    <section id="certificates" className="py-12 md:py-20 bg-gray-50">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center mb-8 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 gradient-text">
             Certificates & Achievements
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Continuous learning and professional development through industry conferences, workshops, and training programs
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+            A collection of certificates from conferences, workshops, and training programs
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {certificates.map((cert, index) => (
-            <div 
-              key={index}
-              className="card-hover bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl group stagger-child"
-              style={{ '--stagger-delay': `${index * 100}ms` } as React.CSSProperties}
-            >
-              <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={cert.image} 
-                  alt={cert.title}
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                <div className="absolute top-4 left-4">
-                  <div className="w-12 h-12 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                    <Award size={24} />
+        <div className="relative max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-4xl mx-auto">
+          <div className="cards cards--active relative h-64 sm:h-80 md:h-96 perspective-1000">
+            {certificates.map((cert, index) => (
+              <div
+                key={index}
+                className={`card ${getCardClass(index)} absolute inset-0 cursor-pointer transition-all duration-500 ease-in-out transform-gpu`}
+                onClick={() => handleCardClick(index)}
+                style={{
+                  zIndex: index === currentIndex ? 10 : certificates.length - Math.abs(index - currentIndex),
+                  transform: index === currentIndex 
+                    ? 'translateX(0) translateY(0) scale(1)' 
+                    : index === (currentIndex + 1) % certificates.length
+                    ? 'translateX(10px) translateY(10px) scale(0.95) sm:translateX(15px) sm:translateY(15px) md:translateX(20px) md:translateY(20px)'
+                    : index < currentIndex
+                    ? 'translateX(-50px) translateY(-10px) scale(0.9) rotateY(-10deg) sm:translateX(-75px) sm:translateY(-15px) md:translateX(-100px) md:translateY(-20px) md:rotateY(-15deg)'
+                    : 'translateX(20px) translateY(20px) scale(0.9) sm:translateX(30px) sm:translateY(30px) md:translateX(40px) md:translateY(40px)'
+                }}
+              >
+                <div className="bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-2xl h-full">
+                  <div className="relative h-2/3 md:h-3/4 overflow-hidden">
+                    <img 
+                      src={cert.image} 
+                      alt={cert.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                   </div>
-                </div>
-                <div className="absolute bottom-4 right-4">
-                  <div className="flex items-center text-white bg-black/50 backdrop-blur-sm px-3 py-1 rounded-full">
-                    <Calendar size={14} className="mr-1" />
-                    <span className="text-sm font-medium">{cert.date}</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-primary mb-2 group-hover:gradient-text transition-all duration-300 line-clamp-2">
-                  {cert.title}
-                </h3>
-                
-                <p className="text-secondary font-medium mb-3">{cert.issuer}</p>
-                
-                <p className="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                  {cert.description}
-                </p>
-                
-                <div className="border-t border-gray-100 pt-4">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-xs text-gray-500 mb-1">Credential ID</p>
-                      <p className="text-sm font-mono text-gray-700">{cert.credentialId}</p>
-                    </div>
-                    <button className="w-10 h-10 flex items-center justify-center text-primary hover:text-white hover:bg-primary rounded-xl border-2 border-primary transition-all duration-300 transform hover:scale-110 group-hover:animate-glow">
-                      <ExternalLink size={16} />
-                    </button>
+                  <div className="p-3 sm:p-4 md:p-6 h-1/3 md:h-1/4 flex items-center justify-center">
+                    <h3 className="text-sm sm:text-base md:text-lg font-semibold text-center line-clamp-2 text-gray-800">
+                      {cert.title}
+                    </h3>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
         
-        <div className="text-center mt-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full">
-            <Award className="w-5 h-5 text-primary mr-2" />
-            <span className="text-primary font-medium">Committed to continuous learning and professional growth</span>
+        <div className="text-center mt-8 md:mt-12">
+          <div className="inline-flex items-center px-4 md:px-6 py-2 md:py-3 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full">
+            <Award className="w-4 h-4 md:w-5 md:h-5 text-primary mr-2" />
+            <span className="text-primary font-medium text-sm md:text-base">Committed to continuous learning and professional growth</span>
           </div>
         </div>
       </div>
