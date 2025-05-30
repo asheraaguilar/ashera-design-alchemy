@@ -1,5 +1,6 @@
 
 import { Award } from 'lucide-react';
+import { useState } from 'react';
 
 const Certificates = () => {
   const certificates = [
@@ -65,6 +66,27 @@ const Certificates = () => {
     }
   ];
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleCardClick = (index: number) => {
+    if (index !== currentIndex) {
+      setCurrentIndex(index);
+    }
+  };
+
+  const getCardClass = (index: number) => {
+    if (index === currentIndex) {
+      return 'card--current';
+    }
+    if (index === (currentIndex + 1) % certificates.length) {
+      return 'card--next';
+    }
+    if (index < currentIndex) {
+      return 'card--out';
+    }
+    return '';
+  };
+
   return (
     <section id="certificates" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
@@ -77,28 +99,42 @@ const Certificates = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {certificates.map((cert, index) => (
-            <div 
-              key={index}
-              className="card-hover bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl group stagger-child"
-              style={{ '--stagger-delay': `${index * 50}ms` } as React.CSSProperties}
-            >
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <img 
-                  src={cert.image} 
-                  alt={cert.title}
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="text-sm font-semibold line-clamp-2">
-                    {cert.title}
-                  </h3>
+        <div className="relative max-w-4xl mx-auto">
+          <div className="cards cards--active relative h-96 perspective-1000">
+            {certificates.map((cert, index) => (
+              <div
+                key={index}
+                className={`card ${getCardClass(index)} absolute inset-0 cursor-pointer transition-all duration-500 ease-in-out transform-gpu`}
+                onClick={() => handleCardClick(index)}
+                style={{
+                  zIndex: index === currentIndex ? 10 : certificates.length - Math.abs(index - currentIndex),
+                  transform: index === currentIndex 
+                    ? 'translateX(0) translateY(0) scale(1)' 
+                    : index === (currentIndex + 1) % certificates.length
+                    ? 'translateX(20px) translateY(20px) scale(0.95)'
+                    : index < currentIndex
+                    ? 'translateX(-100px) translateY(-20px) scale(0.9) rotateY(-15deg)'
+                    : 'translateX(40px) translateY(40px) scale(0.9)'
+                }}
+              >
+                <div className="bg-white rounded-2xl overflow-hidden shadow-2xl h-full">
+                  <div className="relative h-3/4 overflow-hidden">
+                    <img 
+                      src={cert.image} 
+                      alt={cert.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                  </div>
+                  <div className="p-6 h-1/4 flex items-center justify-center">
+                    <h3 className="text-lg font-semibold text-center line-clamp-2 text-gray-800">
+                      {cert.title}
+                    </h3>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
         
         <div className="text-center mt-12">
