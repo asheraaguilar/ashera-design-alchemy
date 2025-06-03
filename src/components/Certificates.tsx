@@ -5,64 +5,140 @@ import { useState } from 'react';
 const Certificates = () => {
   const certificates = [
     {
+      title: "Cetificate of Completion (Internship)",
+      image: "/lovable-uploads/OJT.jpg"
+    },
+    {
       title: "BITCON 2025: Building a Connected Tomorrow: IoT Innovations and Beyond",
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&h=400&fit=crop&crop=center"
+      image: "/lovable-uploads/Bitcon1.jpg"
     },
     {
       title: "Web Development Training",
-      image: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=600&h=400&fit=crop&crop=center"
+      image: "/lovable-uploads/WebDev.jpg"
+    },
+    {
+      title: "PCB Design and Fabrication Training",
+      image: "/lovable-uploads/PCB.jpg"
     },
     {
       title: "LaTeX Training",
-      image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=600&h=400&fit=crop&crop=center"
+      image: "/lovable-uploads/LaTex.jpg"
+    },
+    {
+      title: "Drone Training",
+      image: "/lovable-uploads/Drone.jpg"
     },
     {
       title: "Arduino Training",
-      image: "https://images.unsplash.com/photo-1553808444-e3c8e7cfd6b0?w=600&h=400&fit=crop&crop=center"
+      image: "/lovable-uploads/Arduino.jpg"
     },
     {
       title: "Easy EDA Training",
-      image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=600&h=400&fit=crop&crop=center"
+      image: "/lovable-uploads/EasyEDA.jpg"
     },
     {
       title: "DATABIZ CONFERENCE 2024: Data Science, Artificial Intelligence and Business Analytics",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=center"
+      image: "/lovable-uploads/DataBiz.jpg"
+    },
+    {
+      title: "Service Awardee as Chief Creatice Media Officer of Tech Innovators Society",
+      image: "/lovable-uploads/ServiceAward.jpg"
+    },
+    {
+      title: "Chief Creative Media Officer TechIS Service Award",
+      image: "/lovable-uploads/TechIS.jpg"
+    },
+    {
+      title: "Annex Journos, the Volunteer Writers of Extension Services Office of BatStateU Participation",
+      image: "/lovable-uploads/AnnexJournos.jpg"
+    },
+    {
+      title: "Chief Creative Media Officer of Tech Innovators Society A.Y. 2023-2024",
+      image: "/lovable-uploads/CCMO.png"
+    },
+    {
+      title: "Techno SDG Exposition: Bridging Insights and Innovation",
+      image: "/lovable-uploads/techexpo.jpg"
+    },
+    {
+      title: "BITCON 2024: Navigating the Future of Technology: Integration, Innovation, and Security",
+      image: "/lovable-uploads/Bitcon1.jpg"
+    },
+    {
+      title: "COMLITS: Empowering Learners through Computer Literacy in Public Schools Participation",
+      image: "/lovable-uploads/Comlits.jpg"
+    },
+    {
+      title: "ScratchLogic: Unravelling the Secrets of Programming Participation",
+      image: "/lovable-uploads/ScratchLogic.jpg"
+    },
+    {
+      title: "Inside Out: Pioneering a Fresh Chapter Participation",
+      image: "/lovable-uploads/InsideOut.png"
+    },
+    {
+      title: "Dean's Lister 2nd Semester AY 2021-2022 Recognition",
+      image: "/lovable-uploads/DL2ndSem21-22.png"
+    },
+    {
+      title: "Dean's Lister 2nd Semester AY 2022-2023 Recognition",
+      image: "/lovable-uploads/DL2ndSem22-23.jpg"
+    },
+    {
+      title: "Dean's Lister 2nd Semester AY 2023-2024 Recognition",
+      image: "/lovable-uploads/DeansLister2ndSem23-24.jpg"
+    },
+    {
+      title: "Fundamentals of Analytics Modelling Top 5 Recognition",
+      image: "/lovable-uploads/FAM.png"
     },
     {
       title: "Data Analysis and Visualization Using Excel",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=center"
+      image: "/lovable-uploads/DICT1.png"
     },
     {
       title: "eGOVPh Super App Orientation",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop&crop=center"
+      image: "/lovable-uploads/DICT2.png"
     },
     {
       title: "BITCON 2024: Navigating the Future of Technology: Integration, Innovation and Security",
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&h=400&fit=crop&crop=center"
+      image: "/lovable-uploads/Bitcon1.jpg"
     },
     {
-      title: "TechSynergy: Navigating the Digital Landscape 2023",
-      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop&crop=center"
+      title: "TechSynergy: Navigating the Digital Landscape 2023 - Connecting Concepts, Bridging Technologies",
+      image: "/lovable-uploads/TechSynergy.jpg"
+    },
+    {
+      title: "Techno SDG Exposition: Bridging Insights and Innovation UI/UX SDG Challenge 3rd Place Awardee",
+      image: "/lovable-uploads/TechnoAwardee.jpg"
+    },
+    {
+      title: "Tech for Good: Collaborative Challenge in SDGs 1st Place Recognition",
+      image: "/lovable-uploads/TechforGood1st.png"
+    },
+    {
+      title: "Tech for Good: Collaborative Challenge in SDGs Participation ",
+      image: "/lovable-uploads/TechforGoodPart.png"
+    },
+    {
+      title: "Tech for Good: Collaborative Challenge in SDGs Participation as Public Relations Officer",
+      image: "/lovable-uploads/TechforGoodService.png"
     },
     {
       title: "Odyssey 2.0: Diving Deeper to Leadership",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&crop=center"
+      image: "/lovable-uploads/Odyssey.jpg"
     },
     {
-      title: "Unleashing the Power of Data: A Webinar Series",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=center"
+      title: "Alliance of Computing Sciences Students | Public Relations Officer 2nd Semester A.Y. 2022-2023",
+      image: "/lovable-uploads/PRO.png"
     },
     {
-      title: "Huawei ICT Academy: How to Get Certified?",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop&crop=center"
-    },
-    {
-      title: "Campus Journalism Seminar-Workshop",
-      image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600&h=400&fit=crop&crop=center"
+      title: "Alliance of Computing Sciences Students | Graphic Designer 1st Semester A.Y. 2022-2023",
+      image: "/lovable-uploads/GraphicDesigner.png"
     },
     {
       title: "Division Orientation Training on Robotics Technology",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop&crop=center"
+      image: "/lovable-uploads/Robotics.jpg"
     }
   ];
 

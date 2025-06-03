@@ -5,78 +5,78 @@ const Projects = () => {
   const projects = [
     {
       title: "Electronic Systems Research Center Website",
-      description: "Built with React JS, Node.js, Express.js, and MySQL. Features real-time scheduling, appointment and management tools.",
+      description: "The ESRC Website serves as the official digital platform for the Electronic Systems Research Center. It provides comprehensive information about the center’s research initiatives, projects, facilities, and academic-industry collaborations in the fields of electronics, semiconductors, embedded systems, and IoT. Designed for researchers, students, and stakeholders, the site offers access to publications, news, upcoming events, and opportunities for innovation and partnership in advancing electronic technologies.",
       image: "/lovable-uploads/esrc.png",
       skills: ["HTML","Tailwind CSS"],
       isGlassEffect: true
     },
     {
       title: "PARS: Progressive web application-based Appointment System for Rural Health Services",
-      description: "Built with React JS, Node.js, Express.js, and MySQL. Features real-time scheduling, appointment and management tools.",
+      description: "PARS is a user-friendly Progressive Web Application designed to streamline healthcare appointment scheduling in rural communities. Developed to enhance accessibility and efficiency, PARS enables patients to book, manage, and track appointments with local Rural Health Units (RHUs) anytime, anywhere using their mobile devices. The system reduces wait times, improves service delivery, and promotes better healthcare access through digital innovation tailored for underserved areas.",
       image: "/lovable-uploads/pars.png",
       skills: ["React JS", "Node.js", "MySQL", "Express.js", "Axios"],
       isGlassEffect: true
     },
     {
       title: "Lipeño E-Skolar System",
-      description: "Comprehensive scholarship management system for Lipa City students, featuring application processing and monitoring with the integration of analytics.",
+      description: "A system that will help the applicants of the Educational Benefits Assistance Program of Lipa Batangas to fill-up forms and submit files through the use of modern technology with the integration of business analytics for applying and renewing their educational financial assistance or scholarship",
       image: "/lovable-uploads/lipenoeskolar.png",
-      skills: ["Django", "PostgreSQL", "HTML/CSS/JS"]
-    },
-    {
-      title: "The Apex News App",
-      description: "Comprehensive scholarship management system for Lipa City students, featuring application processing and monitoring with the integration of analytics.",
-      image: "/lovable-uploads/apexnewsapp.png",
-      skills: ["Django", "PostgreSQL", "HTML/CSS/JS"]
-    },
-    {
-      title: "Student Conduct Management",
-      description: "Web-based system for managing student conduct records, disciplinary actions, and behavioral tracking in educational institutions.",
-      image: "/lovable-uploads/StudentConductManagement.png",
-      skills: ["PHP", "HTML/CSS", "JavaScript"]
-    },
-    {
-      title: "Trash Track",
-      description: "Web-based system for managing student conduct records, disciplinary actions, and behavioral tracking in educational institutions.",
-      image: "/lovable-uploads/trashtrack.png",
-      skills: ["PHP", "HTML/CSS", "JavaScript"]
-    },
-    {
-      title: "Angat Lipa",
-      description: "Web-based system for managing student conduct records, disciplinary actions, and behavioral tracking in educational institutions.",
-      image: "/lovable-uploads/angatlipa.png",
-      skills: ["PHP", "HTML/CSS", "JavaScript"]
-    },
-    {
-      title: "Snackify Ordering System",
-      description: "Web-based system for managing student conduct records, disciplinary actions, and behavioral tracking in educational institutions.",
-      image: "/lovable-uploads/snackify.png",
-      skills: ["PHP", "HTML/CSS", "JavaScript"]
-    },
-    {
-      title: "Bus Tracking System",
-      description: "Real-time bus tracking and monitoring system developed in Visual Basic, providing location updates and route management.",
-      image: "bussystem.png",
-      skills: ["Visual Basic", "Tracking", "GPS"]
-    },
-    {
-      title: "BeeIS U Store Inventory and Management Dashboard",
-      description: "Real-time bus tracking and monitoring system developed in Visual Basic, providing location updates and route management.",
-      image: "/lovable-uploads/BeeIsU.png",
-      skills: ["Power Bi"]
-    },
-    {
-      title: "Lipeños System",
-      description: "Comprehensive citizen information management system built with C# and MySQL, designed for efficient data handling and service delivery.",
-      image: "/lovable-uploads/lipeno.png",
-      skills: ["C#", "MySQL", "Desktop"]
+      skills: ["Django", "PostgreSQL", "HTML", "CSS", "JS"]
     },
     {
       title: "AgriLink",
       description: "Agricultural management platform designed in Figma, connecting farmers with resources, markets, and agricultural services.",
       image: "/lovable-uploads/agrilink.png",
       skills: ["Figma"]
-    }
+    },
+    {
+      title: "The Apex News App",
+      description: "The Apex News App is a reliable and efficient app that delivers critical news and creative works, tailored to the specific needs of Batangas State University TNEU - Lipa Campus, enhancing communication within the Red Spartan Community.",
+      image: "/lovable-uploads/apexnewsapp.png",
+      skills: ["Dart"]
+    },
+    {
+      title: "Student Conduct Management System",
+      description: "A information management system for the Office of the Student Discipline that would help track and record student conduct violations, and sanctions acquired by students for the academic year with improved accuracy, reliability, and transparency.",
+      image: "/lovable-uploads/StudentConductManagement.png",
+      skills: ["PHP", "HTML/CSS", "JavaScript"]
+    },
+    {
+      title: "Trash Track: A Garbage Management Monitoring System",
+      description: "A mobile garbage tracking system prototype, which can provide real-time information about waste collection, transportation, and disposal. This application can be used by citizens, the admin of the waste management company, and government agencies to monitor the entire waste management process.",
+      image: "/lovable-uploads/trashtrack.png",
+      skills: ["Moqups"]
+    },
+    {
+      title: "Angat Lipa",
+      description: "A mobile application prototype that aim to address unemployment inequality within the Lipa City by establishing a dedicated online job portal tailored to the unique needs of the city. This platform will serve as a centralized hub connecting job seekers with local employment opportunities, fostering economic growth, and reducing disparities in access to employment.",
+      image: "/lovable-uploads/angatlipa.png",
+      skills: ["Moqups"]
+    },
+    {
+      title: "Snackify: Order Management System",
+      description: "A web-based platform developed for RMJ Merienda and Pasalubong shop. It facilitates the management of snack orders, both pending and past orders, and customer accounts.",
+      image: "/lovable-uploads/snackify.png",
+      skills: ["PHP", "HTML/CSS", "JavaScript"]
+    },
+    {
+      title: "BeeIS U Store Inventory and Management Dashboard",
+      description: "BeeIS U Store is a centralized dashboard system designed to simplify and automate inventory and store management processes. It provides real-time tracking of stock levels, sales, and transactions, helping store operators make data-driven decisions. With an intuitive interface and efficient reporting tools, BeeIS ensures better control over inventory, reduces manual errors, and enhances overall operational efficiency for small to medium-sized retail businesses.",
+      image: "/lovable-uploads/BeeIsU.png",
+      skills: ["Power Bi"]
+    },
+    {
+      title: "Lipeños System",
+      description: "A System that will help the applicants of the Educational Benefit Assistance Program of Lipa City Batangas to fill up forms and submit files through the use of modern technology for applying and renewing their educational financial assistance or scholarship.",
+      image: "/lovable-uploads/lipeno.png",
+      skills: ["C#", "MySQL", "Desktop"]
+    },
+    {
+      title: "SM Terminal Bus Booking Management System",
+      description: "A streamlined digital platform designed to manage and automate the reservation, ticketing, and scheduling processes of bus terminals. It enables passengers to book trips efficiently while allowing terminal staff to monitor bus availability, manage routes, and generate reports in real-time. With its user-friendly interface and reliable database, the system enhances travel convenience, reduces congestion at ticket counters, and improves overall operational efficiency.",
+      image: "/lovable-uploads/bussystem.png",
+      skills: ["Visual Basic"]
+    },
   ];
 
   return (

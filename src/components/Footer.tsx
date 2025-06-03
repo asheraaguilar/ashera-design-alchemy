@@ -54,8 +54,8 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Get In Touch</h4>
             <div className="space-y-2 text-white/80">
               <p>Lipa City, Batangas, Philippines</p>
-              <p>ashera.aguilar@example.com</p>
-              <p>+1 (234) 567-890</p>
+              <p>aguilarasherakathryn@gmail.com</p>
+              <p>09952318729</p>
             </div>
           </div>
         </div>
@@ -63,8 +63,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-4 md:mb-0">
-            <p className="text-white/80">Made with</p>
-            <Heart className="mx-2 w-4 h-4 text-red-400 fill-current" />
+            <p className="text-white/80">Made </p>
             <p className="text-white/80">by Ashera Kathryn R. Aguilar</p>
           </div>
           <div className="text-white/80 text-sm">

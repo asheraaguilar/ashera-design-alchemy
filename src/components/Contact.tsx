@@ -58,7 +58,7 @@ const Contact = () => {
                     { icon: Linkedin, href: "https://www.linkedin.com/in/ashera-kathryn-aguilar-a40b89289/", label: "LinkedIn" },
                     { icon: Github, href: "https://github.com/asheraaguilar", label: "GitHub" },
                     { icon: Facebook, href: "https://www.facebook.com/ashera.aguilar", label: "Facebook" },
-                    { icon: Instagram, href: "#", label: "Instagram" }
+                    { icon: Instagram, href: "https://www.instagram.com/victorious_ashera", label: "Instagram" }
                   ].map((social, index) => (
                     <a
                       key={social.label}
