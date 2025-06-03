@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -165,9 +164,9 @@ const DesignPortfolio = () => {
           </TabsContent>
         </Tabs>
 
-        {/* Modal Carousel */}
+        {/* Modal Carousel - Made smaller and more proportional */}
         <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-          <DialogContent className="max-w-4xl h-[90vh] p-0">
+          <DialogContent className="max-w-3xl max-h-[80vh] p-0">
             <div className="relative h-full">
               <Button
                 variant="ghost"
@@ -182,8 +181,8 @@ const DesignPortfolio = () => {
                 <CarouselContent className="h-full">
                   {filteredWorks.map((work, index) => (
                     <CarouselItem key={work.id} className="h-full">
-                      <div className="flex flex-col h-full">
-                        <div className="flex-1 relative">
+                      <div className="flex flex-col h-full max-h-[75vh]">
+                        <div className="flex-1 relative max-h-[60vh]">
                           <img
                             src={work.image}
                             alt={work.title}
