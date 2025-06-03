@@ -1,6 +1,13 @@
 
 import { Award } from 'lucide-react';
-import { useState } from 'react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Card, CardContent } from "@/components/ui/card";
 
 const Certificates = () => {
   const certificates = [
@@ -142,27 +149,6 @@ const Certificates = () => {
     }
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handleCardClick = (index: number) => {
-    if (index !== currentIndex) {
-      setCurrentIndex(index);
-    }
-  };
-
-  const getCardClass = (index: number) => {
-    if (index === currentIndex) {
-      return 'card--current';
-    }
-    if (index === (currentIndex + 1) % certificates.length) {
-      return 'card--next';
-    }
-    if (index < currentIndex) {
-      return 'card--out';
-    }
-    return '';
-  };
-
   return (
     <section id="certificates" className="py-12 md:py-20 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
@@ -175,42 +161,40 @@ const Certificates = () => {
           </p>
         </div>
         
-        <div className="relative max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-4xl mx-auto">
-          <div className="cards cards--active relative h-64 sm:h-80 md:h-96 perspective-1000">
-            {certificates.map((cert, index) => (
-              <div
-                key={index}
-                className={`card ${getCardClass(index)} absolute inset-0 cursor-pointer transition-all duration-500 ease-in-out transform-gpu`}
-                onClick={() => handleCardClick(index)}
-                style={{
-                  zIndex: index === currentIndex ? 10 : certificates.length - Math.abs(index - currentIndex),
-                  transform: index === currentIndex 
-                    ? 'translateX(0) translateY(0) scale(1)' 
-                    : index === (currentIndex + 1) % certificates.length
-                    ? 'translateX(10px) translateY(10px) scale(0.95) sm:translateX(15px) sm:translateY(15px) md:translateX(20px) md:translateY(20px)'
-                    : index < currentIndex
-                    ? 'translateX(-50px) translateY(-10px) scale(0.9) rotateY(-10deg) sm:translateX(-75px) sm:translateY(-15px) md:translateX(-100px) md:translateY(-20px) md:rotateY(-15deg)'
-                    : 'translateX(20px) translateY(20px) scale(0.9) sm:translateX(30px) sm:translateY(30px) md:translateX(40px) md:translateY(40px)'
-                }}
-              >
-                <div className="bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-2xl h-full">
-                  <div className="relative h-2/3 md:h-3/4 overflow-hidden">
-                    <img 
-                      src={cert.image} 
-                      alt={cert.title}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                  </div>
-                  <div className="p-3 sm:p-4 md:p-6 h-1/3 md:h-1/4 flex items-center justify-center">
-                    <h3 className="text-sm sm:text-base md:text-lg font-semibold text-center line-clamp-2 text-gray-800">
-                      {cert.title}
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="max-w-5xl mx-auto px-8">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {certificates.map((cert, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                  <Card className="certificate-card h-full">
+                    <CardContent className="p-0 h-full">
+                      <div className="relative h-64 md:h-72 overflow-hidden rounded-t-lg">
+                        <img 
+                          src={cert.image} 
+                          alt={cert.title}
+                          className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                      </div>
+                      <div className="p-4 md:p-6">
+                        <h3 className="text-sm md:text-base font-semibold text-center line-clamp-3 text-gray-800 min-h-[3rem] flex items-center justify-center">
+                          {cert.title}
+                        </h3>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden sm:flex -left-4" />
+            <CarouselNext className="hidden sm:flex -right-4" />
+          </Carousel>
         </div>
         
         <div className="text-center mt-8 md:mt-12">
