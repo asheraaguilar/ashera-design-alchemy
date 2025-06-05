@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -72,7 +73,7 @@ const Header = () => {
             className="flex items-center space-x-3 hover:scale-105 transition-transform duration-300"
           >
             <img 
-              src="/lovable-uploads/41726974-d567-46a0-97c7-a7ea02bec992.png" 
+              src="/lovable-uploads/AK Logo.svg" 
               alt="Ashera Aguilar Logo" 
               className="h-10 w-auto"
             />
