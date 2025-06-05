@@ -5,7 +5,7 @@ const Projects = () => {
   const projects = [
     {
       title: "Electronic Systems Research Center Website",
-      description: "The ESRC Website serves as the official digital platform for the Electronic Systems Research Center. It provides comprehensive information about the center's research initiatives, projects, facilities, and academic-industry collaborations in the fields of electronics, semiconductors, embedded systems, and IoT. Designed for researchers, students, and stakeholders, the site offers access to publications, news, upcoming events, and opportunities for innovation and partnership in advancing electronic technologies.",
+      description: "The ESRC Website serves as the official digital platform for the Electronic Systems Research Center. It provides comprehensive information about the center’s research initiatives, projects, facilities, and academic-industry collaborations in the fields of electronics, semiconductors, embedded systems, and IoT. Designed for researchers, students, and stakeholders, the site offers access to publications, news, upcoming events, and opportunities for innovation and partnership in advancing electronic technologies.",
       image: "/lovable-uploads/esrc.png",
       skills: ["HTML","Tailwind CSS"],
       isGlassEffect: true
@@ -113,7 +113,7 @@ const Projects = () => {
                   {project.description}
                 </p>
                 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.skills.map((skill, skillIndex) => (
                     <span 
                       key={skillIndex}
@@ -126,6 +126,22 @@ const Projects = () => {
                       {skill}
                     </span>
                   ))}
+                </div>
+                
+                <div className="flex justify-between items-center">
+                  <button className="text-primary font-medium hover:underline flex items-center group transition-all duration-300">
+                    <span>View Project</span>
+                    <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  </button>
+                  
+                  <div className="flex space-x-2">
+                    <button className="w-8 h-8 flex items-center justify-center text-primary hover:text-white hover:bg-primary rounded-full border-2 border-primary transition-all duration-300 transform hover:scale-110">
+                      <ExternalLink size={14} />
+                    </button>
+                    <button className="w-8 h-8 flex items-center justify-center text-primary hover:text-white hover:bg-primary rounded-full border-2 border-primary transition-all duration-300 transform hover:scale-110">
+                      <Github size={14} />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
