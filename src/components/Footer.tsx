@@ -63,8 +63,8 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-4 md:mb-0">
-            <p className="text-white/80">Made </p>
-            <p className="text-white/80">by Ashera Kathryn R. Aguilar</p>
+            <p className="text-white/80">Made by </p>
+            <p className="text-white/80">: Ashera Kathryn R. Aguilar</p>
           </div>
           <div className="text-white/80 text-sm">
             <p>© 2025 All Rights Reserved | Last updated: May 29, 2025</p>

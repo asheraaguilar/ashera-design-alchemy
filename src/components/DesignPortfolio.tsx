@@ -23,25 +23,34 @@ const DesignPortfolio = () => {
   const designWorks = [
     {
       id: 1,
-      title: 'Event Promotion Pubmat',
+      title: 'Apex Promotion Pubmat',
       category: 'pubmats',
       images: [
-        'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1558655146-d09347e92766?w=400&h=600&fit=crop'
+        '/lovable-uploads/Apex1.jpg',
+        '/lovable-uploads/Apex2.jpg',
+        '/lovable-uploads/Apex3.jpg',
+        '/lovable-uploads/Apex4.jpg',
+        '/lovable-uploads/Apex5.jpg',
+        '/lovable-uploads/Apex6.jpg',
+        '/lovable-uploads/Apex7.jpg'
       ],
-      description: 'Modern event promotion design for college activities',
+      description: 'Modern event promotion design for campus events and coverage.',
       height: 'tall'
     },
     {
       id: 2,
-      title: 'Newsletter Layout Design',
-      category: 'newspaper',
+      title: 'Church Publication Materials',
+      category: 'pubmats',
       images: [
-        'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400&h=300&fit=crop',
-        'https://images.unsplash.com/photo-1495020689067-958852a7765e?w=400&h=300&fit=crop'
+        '/lovable-uploads/Church1.jpg',
+        '/lovable-uploads/Church2.jpg',
+        '/lovable-uploads/Church3.jpg',
+        '/lovable-uploads/Church4.jpg',
+        '/lovable-uploads/Church5.jpg',
+        '/lovable-uploads/Church6.jpg',
+        '/lovable-uploads/Church7.jpg'
       ],
-      description: 'Clean and professional newsletter layout',
+      description: 'Promotion design for church events',
       height: 'medium'
     },
     {
@@ -49,66 +58,93 @@ const DesignPortfolio = () => {
       title: 'Custom T-Shirt Design',
       category: 'shirts',
       images: [
-        'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=500&fit=crop',
-        'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=400&h=500&fit=crop'
+        '/lovable-uploads/Shirt1.png',
+        '/lovable-uploads/Shirt2.png',
+        '/lovable-uploads/Shirt3.jpg',
+        '/lovable-uploads/Shirt4.jpg',
+        '/lovable-uploads/Shirt5.png',
+        '/lovable-uploads/Shirt6.png',
+        '/lovable-uploads/Shirt7.png',
+        '/lovable-uploads/Shirt8.png',
+        '/lovable-uploads/Shirt9.png',
+        '/lovable-uploads/Shirt10.png',
+        '/lovable-uploads/Shirt11.png',
+        '/lovable-uploads/Shirt12.png',
+        '/lovable-uploads/Shirt13.png',
+        '/lovable-uploads/Shirt14.png'
       ],
       description: 'Creative t-shirt design for student organization',
       height: 'tall'
     },
     {
       id: 4,
-      title: 'Academic Poster',
-      category: 'pubmats',
+      title: 'Tabloid of the Apex Publication A.Y 2024-2025',
+      category: 'newspaper',
       images: [
-        'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400&h=350&fit=crop',
-        'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=350&fit=crop',
-        'https://images.unsplash.com/photo-1558655146-d09347e92766?w=400&h=350&fit=crop'
+        '/lovable-uploads/Tabloid1.jpg',
+        '/lovable-uploads/Tabloid2.jpg',
+        '/lovable-uploads/Tabloid3.jpg',
+        '/lovable-uploads/Tabloid4.jpg',
+        '/lovable-uploads/Tabloid5.jpg',
+        '/lovable-uploads/Tabloid6.jpg',
+        '/lovable-uploads/Tabloid7.jpg',
+        '/lovable-uploads/Tabloid8.jpg',
+        '/lovable-uploads/Tabloid9.jpg',
+        '/lovable-uploads/Tabloid10.jpg',
+        '/lovable-uploads/Tabloid11.jpg',
+        '/lovable-uploads/Tabloid12.jpg',
+        '/lovable-uploads/Tabloid13.jpg',
+        '/lovable-uploads/Tabloid14.jpg',
+        '/lovable-uploads/Tabloid15.jpg',
+        '/lovable-uploads/Tabloid16.jpg',
+        '/lovable-uploads/Tabloid17.jpg',
+        '/lovable-uploads/Tabloid18.jpg',
+        '/lovable-uploads/Tabloid19.jpg',
+        '/lovable-uploads/Tabloid20.jpg',
+        '/lovable-uploads/Tabloid21.jpg',
+        '/lovable-uploads/Tabloid22.jpg',
+        '/lovable-uploads/Tabloid23.jpg',
+        '/lovable-uploads/Tabloid24.jpg'
       ],
-      description: 'Academic conference poster design',
+      description: 'The official tabloid for Academic Year 2024-2025 of the The APEX Group of Publications | Overall 5th Best Tabloid | Layout and Design- 9th Place',
       height: 'medium'
     },
     {
       id: 5,
-      title: 'Campus News Layout',
+      title: 'Tabloid of the Apex Publication A.Y 2023-2024',
       category: 'newspaper',
       images: [
-        'https://images.unsplash.com/photo-1495020689067-958852a7765e?w=400&h=450&fit=crop',
-        'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=450&fit=crop'
+        '/lovable-uploads/Tabloid1.1.png',
+        '/lovable-uploads/Tabloid1.2.png',
+        '/lovable-uploads/Tabloid1.3.png',
+        '/lovable-uploads/Tabloid1.4.png',
+        '/lovable-uploads/Tabloid1.5.png',
+        '/lovable-uploads/Tabloid1.6.png',
+        '/lovable-uploads/Tabloid1.7.png',
+        '/lovable-uploads/Tabloid1.8.png',
+        '/lovable-uploads/Tabloid1.9.png',
+        '/lovable-uploads/Tabloid1.10.png',
+        '/lovable-uploads/Tabloid1.11.png',
+        '/lovable-uploads/Tabloid1.12.png',
+        '/lovable-uploads/Tabloid1.13.png',
+        '/lovable-uploads/Tabloid1.14.png',
+        '/lovable-uploads/Tabloid1.15.png',
+        '/lovable-uploads/Tabloid1.16.png'
       ],
-      description: 'University newspaper front page layout',
+      description: 'The official tabloid for Academic Year 2023-2024 of the The APEX | Overall 3rd Best Tabloid',
       height: 'medium'
     },
     {
       id: 6,
-      title: 'Sports Team Jersey',
-      category: 'shirts',
-      images: [
-        'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=400&h=550&fit=crop',
-        'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=550&fit=crop'
-      ],
-      description: 'Sports team jersey design with modern aesthetics',
-      height: 'tall'
-    },
-    {
-      id: 7,
-      title: 'Brand Identity Poster',
+      title: 'Tech Innovators Society Sample Pubmats',
       category: 'pubmats',
       images: [
-        'https://images.unsplash.com/photo-1558655146-d09347e92766?w=400&h=320&fit=crop'
+        '/lovable-uploads/techis2.jpg',
+        '/lovable-uploads/techis1.jpg',
+        '/lovable-uploads/techis3.jpg'
       ],
-      description: 'Brand identity poster with modern typography',
-      height: 'short'
-    },
-    {
-      id: 8,
-      title: 'Magazine Spread',
-      category: 'newspaper',
-      images: [
-        'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=280&fit=crop',
-        'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400&h=280&fit=crop'
-      ],
-      description: 'Editorial magazine spread design',
-      height: 'short'
+      description: 'Modern event promotion design for campus events and coverage.',
+      height: 'tall'
     }
   ];
 
