@@ -10,6 +10,10 @@ const Hero = () => {
     document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const downloadCV = () => {
+    window.open('https://drive.google.com/file/d/1_6-D9CIT3ePUHSBNhM4xTziwbczG1hDR/view?usp=drive_link', '_blank');
+  };
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -60,7 +64,10 @@ const Hero = () => {
               View Projects
             </button>
             
-            <button className="border-2 border-secondary text-secondary px-8 py-4 rounded-lg font-medium hover:bg-secondary hover:text-white transition-all duration-300 flex items-center justify-center">
+            <button 
+              onClick={downloadCV}
+              className="border-2 border-secondary text-secondary px-8 py-4 rounded-lg font-medium hover:bg-secondary hover:text-white transition-all duration-300 flex items-center justify-center"
+            >
               <Download className="mr-2 w-5 h-5" />
               Download CV
             </button>
