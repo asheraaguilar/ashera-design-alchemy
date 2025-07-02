@@ -1,4 +1,3 @@
-
 import { ArrowRight, Github, ExternalLink } from 'lucide-react';
 
 const Projects = () => {
@@ -8,14 +7,16 @@ const Projects = () => {
       description: "The ESRC Website serves as the official digital platform for the Electronic Systems Research Center. It provides comprehensive information about the center's research initiatives, projects, facilities, and academic-industry collaborations in the fields of electronics, semiconductors, embedded systems, and IoT. Designed for researchers, students, and stakeholders, the site offers access to publications, news, upcoming events, and opportunities for innovation and partnership in advancing electronic technologies.",
       image: "/lovable-uploads/esrc.png",
       skills: ["HTML","Tailwind CSS"],
-      isGlassEffect: true
+      isGlassEffect: true,
+      url: "https://electronic-systems-research-center.github.io/"
     },
     {
       title: "PARS: Progressive web application-based Appointment System for Rural Health Services",
       description: "PARS is a user-friendly Progressive Web Application designed to streamline healthcare appointment scheduling in rural communities. Developed to enhance accessibility and efficiency, PARS enables patients to book, manage, and track appointments with local Rural Health Units (RHUs) anytime, anywhere using their mobile devices. The system reduces wait times, improves service delivery, and promotes better healthcare access through digital innovation tailored for underserved areas.",
       image: "/lovable-uploads/pars.png",
       skills: ["React JS", "Node.js", "MySQL", "Express.js", "Axios"],
-      isGlassEffect: true
+      isGlassEffect: true,
+      url: "https://pars-render.onrender.com/"
     },
     {
       title: "Lipeño E-Skolar System",
@@ -79,6 +80,12 @@ const Projects = () => {
     },
   ];
 
+  const handleProjectClick = (project: typeof projects[0]) => {
+    if (project.url) {
+      window.open(project.url, '_blank');
+    }
+  };
+
   return (
     <section id="projects" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
@@ -92,8 +99,9 @@ const Projects = () => {
               key={index}
               className={`card-hover rounded-2xl overflow-hidden shadow-lg group stagger-child ${
                 project.isGlassEffect ? 'glass-effect' : 'bg-white'
-              }`}
+              } ${project.url ? 'cursor-pointer' : ''}`}
               style={{ '--stagger-delay': `${index * 100}ms` } as React.CSSProperties}
+              onClick={() => handleProjectClick(project)}
             >
               <div className="relative h-60 overflow-hidden">
                 <img 
@@ -102,6 +110,11 @@ const Projects = () => {
                   className="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                {project.url && (
+                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <ExternalLink className="text-white w-6 h-6" />
+                  </div>
+                )}
               </div>
               
               <div className={`p-6 ${project.isGlassEffect ? 'backdrop-blur-sm' : ''}`}>
